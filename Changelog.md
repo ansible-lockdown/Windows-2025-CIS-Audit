@@ -1,4 +1,4 @@
-# Changes to Windows2025-CIS-Audit
+# Changes to Windows-2025-CIS-Audit
 
 ## September 2026 - NIST and domain members
 
