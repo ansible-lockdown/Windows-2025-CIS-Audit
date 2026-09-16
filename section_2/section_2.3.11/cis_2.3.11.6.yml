@@ -2,22 +2,23 @@
 
 {{ if .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_2_3_11_6 }}
-file:
-  win25cis_2_3_11_6_forcelogoffwhenhourexpire:
-    title: "2.3.11.6 | Ensure 'Network security: Force logoff when logon hours expire' is set to 'Enabled' | ForceLogoffWhenHourExpire"
-    path: '{{ .Vars.win25cis_snapshot_dir }}\SystemAccess.ForceLogoffWhenHourExpire'
+registry:
+  HKLM\SYSTEM\CurrentControlSet\Control\Lsa\LMCompatibilityLevel:
+    title: "2.3.11.6 | Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' | LMCompatibilityLevel"
     exists: true
-    contents:
-      - '/^1$/'
-    skip: {{ if eq .Vars.win25cis_system_role "standalone" }}false{{ else }}true{{ end }}
+    value: 5
+    type: REG_DWORD
     meta:
-      skip_reason: "domain scoped - on a domain joined host the Default Domain Policy sets this [System Access] value, so the role does not apply it"
       domaincontroller: 1
       memberserver: 1
       server: 1
       CIS_ID:
         - 2.3.11.6
       NIST800-53R5:
-        - AC-2(12)
+        - AC-17(2)
+        - IA-5
+        - IA-5(1)
+        - SC-8
+        - SC-8(1)
   {{ end }}
 {{ end }}

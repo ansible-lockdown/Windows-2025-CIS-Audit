@@ -1,0 +1,22 @@
+---
+
+{{ if and (eq .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
+  {{ if .Vars.win25cis_rule_18_9_41_1 }}
+    {{ if eq .Vars.win25cis_system_role "domaincontroller" }}
+registry:
+  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\SAM\SamrChangeUserPasswordApiPolicy:
+    title: "18.9.41.1 | Ensure 'Configure SAM change password RPC methods policy' is set to 'Enabled: Allow strong encryption change password RPC method only' (DC only) | SamrChangeUserPasswordApiPolicy"
+    exists: true
+    value: 2
+    type: REG_DWORD
+    meta:
+      domaincontroller: 1
+      server: 1
+      CIS_ID:
+        - 18.9.41.1
+      NIST800-53R5:
+        - AC-17
+        - SC-12
+    {{ end }}
+  {{ end }}
+{{ end }}

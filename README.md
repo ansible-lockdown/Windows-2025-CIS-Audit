@@ -2,7 +2,7 @@
 
 ## Overview
 
-### Based on CIS Microsoft Windows Server 2025 Benchmark v1.0.0
+### Based on CIS Microsoft Windows Server 2025 Benchmark v2.1.0
 
 [Centre For Internet Security]
 
@@ -27,16 +27,17 @@ regeneration and the candidate written to a gitignored `.regen/` instead.
 
 ## Server profiles
 
-A Server benchmark splits by host role as well as by level. Of the 462
-recommendations, 395 apply to both a domain controller and a member server, 31
+A Server benchmark splits by host role as well as by level. Of the 428
+recommendations, 361 apply to both a domain controller and a member server, 31
 are DC only and 36 are MS only. `win25cis_system_role` selects which, and
 `run_audit.ps1` derives it from `Win32_ComputerSystem.DomainRole` rather than
 asking for it, so it cannot silently disagree with the host.
 
-The two axes do not factor. Control 18.7.1 is Level 1 on a domain controller and
-Level 2 on a member server, so no pair of role and level booleans can express
-it. The generated gates use the cross product, and collapse to a bare level gate
-for the 388 controls that apply identically to both roles.
+The two axes do not always factor. In v1.0.0, control 18.7.1 was Level 1 on a
+domain controller and Level 2 on a member server, so no pair of role and level
+booleans could express it; v2.1.0 makes it Level 1 on both. The generated gates
+use the cross product, and collapse to a bare level gate for the controls that
+apply identically to both roles.
 
 CIS treats any server that is not a domain controller as a Member Server,
 standalone included.
@@ -57,12 +58,8 @@ Two consequences worth stating plainly, both proven against live hosts:
   secedit backed section 1 controls cannot hold locally there. The remediation
   role skips them and warns; this audit reports them as skipped, with the
   reason in `meta.skip_reason`, so the count still adds up. To meet CIS section 1 on a member server, set it in the Default Domain
-  Policy. 2.3.11.6 (`ForceLogoffWhenHourExpire`) is also a `[System Access]`
+  Policy. 2.3.11.5 (`ForceLogoffWhenHourExpire`) is also a `[System Access]`
   value the Default Domain Policy sets, so it is skipped the same way.
-- **Group Policy outranks a registry write on a domain controller.** Control
-  2.3.5.4 applies and is then reverted at the next policy refresh. It is
-  expected to fail on a DC hardened by the remediation role; set it in the
-  Default Domain Controllers Policy instead.
 
 Controls that cannot be asserted are recorded in `coverage.json` with a reason
 code rather than being given an assertion that always passes. The table below is
@@ -141,7 +138,7 @@ rights that would otherwise sever the control connection. Those show as failures
 until the role is run with `win_skip_for_test: false`.
 
 Some controls name a principal that only exists when an optional feature is
-installed - Hyper-V for 2.2.19, IIS for 2.2.33, Exchange for 2.2.38. The
+installed - Hyper-V for 2.2.18, IIS for 2.2.32, Exchange for 2.2.37. The
 feature-dependent principal is matched as an optional group, so these pass on a
 host with the feature and on one without it. That is deliberately lenient in one
 direction: a host that grants the principal without having the feature also
@@ -153,19 +150,19 @@ version can assert the exact membership per branch.
 | Section | In benchmark | Asserted | Coverage |
 | --- | --- | --- | --- |
 | 1 | 11 | 11 | 100% |
-| 2 | 123 | 121 | 98% |
+| 2 | 118 | 116 | 98% |
 | 5 | 2 | 2 | 100% |
 | 9 | 23 | 23 | 100% |
 | 17 | 34 | 34 | 100% |
-| 18 | 257 | 257 | 100% |
-| 19 | 12 | 12 | 100% |
-| **All** | **462** | **460** | **99.6%** |
+| 18 | 229 | 229 | 100% |
+| 19 | 11 | 11 | 100% |
+| **All** | **428** | **426** | **99.5%** |
 
 ### Not asserted
 
 | Rule | Title | Reason |
 | --- | --- | --- |
-| 2.2.34 | Ensure 'Increase scheduling priority' is set to 'Administrators, Window Manager\Window Manager Group' | NO_ASSERTABLE_STATE |
+| 2.2.33 | Ensure 'Increase scheduling priority' is set to 'Administrators, Window Manager\Window Manager Group' | NO_ASSERTABLE_STATE |
 | 2.3.10.9 | Ensure 'Network access: Remotely accessible registry paths and sub-paths' is configured | NO_ASSERTABLE_STATE |
 
 ### Controls that branch on state discovered at run time
@@ -176,7 +173,7 @@ an account has been renamed, what a site variable was set to. Each
 asserts the part that holds on every host; the feature-dependent
 part is matched optionally rather than required.
 
-2.2.19, 2.2.33, 2.2.38, 2.3.1.3, 2.3.1.4
+2.2.18, 2.2.32, 2.2.37, 2.3.1.3, 2.3.1.4
 
 <!-- END COVERAGE -->
 

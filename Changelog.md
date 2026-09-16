@@ -1,5 +1,24 @@
 # Changes to Windows-2025-CIS-Audit
 
+## 2.1.0 based on CIS Benchmark v2.1.0
+
+- Benchmark version v1.0.0 to v2.1.0
+- Specs regenerated from the upgraded remediation role
+- 126 controls renumbered
+- 43 controls retired, including the 18.10.43 Defender Antivirus group
+- 9 controls added: 18.7.14-18.7.18, 18.9.7.2, 18.9.17.1, 18.11.1, 18.11.2
+- Renumbered specs moved to their new section folders
+- 17.8.1 asserts Success only
+- 2.2.30, 2.2.31, 2.2.32 include RESTRICTED SERVICES\PrintSpoolerService
+- 2.2.30 asserts LOCAL SERVICE, NETWORK SERVICE instead of NONE
+- 18.9.27.1 asserted on domain controllers only
+- 18.9.41.3 asserts ROCA validation Block
+- 2.3.5.4 asserts LDAPServerEnforceIntegrity
+- 18.9.19.5 asserts DisableBkGndGroupPolicy is absent
+- 18.9.27.2 asserts RunAsPPL in the Windows System policy key
+- run_audit.ps1 BenchmarkVer 2.1.0
+- README profile counts and control references updated
+
 ## September 2026 - NIST and domain members
 
 - NIST800-53R5 added to meta, taken from the role's NIST tags
