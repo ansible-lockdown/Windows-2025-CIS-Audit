@@ -2,6 +2,7 @@
 
 ## September 2026 - NIST and domain members
 
+- 2.2.31 asserts S-1-5-19,S-1-5-20 for SeAuditPrivilege, was NONE
 - NIST800-53R5 added to meta, taken from the role's NIST tags
   - The benchmark JSON carries GRID references only
   - 19.5.1.1 has no NIST tag, so no field
