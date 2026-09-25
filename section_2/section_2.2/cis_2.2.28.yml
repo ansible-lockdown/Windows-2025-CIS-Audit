@@ -2,7 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_2_2_28 }}
-    {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 file:
   win25cis_2_2_28_seenabledelegationprivilege:
     title: "2.2.28 | Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One' (MS only) | SeEnableDelegationPrivilege"

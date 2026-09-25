@@ -2,7 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_2_2_38 }}
-    {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 file:
   win25cis_2_2_38_sesecurityprivilege:
     title: "2.2.38 | Ensure 'Manage auditing and security log' is set to 'Administrators' (MS only) | SeSecurityPrivilege"

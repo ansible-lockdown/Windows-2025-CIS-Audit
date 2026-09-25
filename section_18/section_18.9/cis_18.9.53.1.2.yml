@@ -2,7 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_18_9_53_1_2 }}
-    {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\W32Time\Timeproviders\Ntpserver\Enabled:
     title: "18.9.53.1.2 | Ensure 'Enable Windows NTP Server' is set to 'Disabled' (MS only) | Enabled"

@@ -3,7 +3,7 @@
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_2_2_3 }}
     {{ if not .Vars.win25cis_win_skip_for_test }}
-      {{ if eq .Vars.win25cis_system_role "memberserver" }}
+      {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 file:
   win25cis_2_2_3_senetworklogonright:
     title: "2.2.3 | Ensure 'Access this computer from the network' is set to 'Administrators, Authenticated Users' (MS only) | SeNetworkLogonRight"

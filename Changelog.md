@@ -2,6 +2,9 @@
 
 ## 2.1.0 based on CIS Benchmark v2.1.0
 
+- 17 MS only controls and 5.2 Print Spooler asserted on standalone servers
+- 2.3.6.x asserted on domain controllers
+- README: stand-alone server scope and the NGWS switch
 - Benchmark version v1.0.0 to v2.1.0
 - Specs regenerated from the upgraded remediation role
 - 126 controls renumbered

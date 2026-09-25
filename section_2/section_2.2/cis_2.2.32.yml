@@ -2,7 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_2_2_32 }}
-    {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 file:
   win25cis_2_2_32_seimpersonateprivilege:
     title: "2.2.32 | Ensure 'Impersonate a client after authentication' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE, RESTRICTED SERVICES\\PrintSpoolerService' (MS only) | SeImpersonatePrivilege"

@@ -2,7 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_18_9_41_2 }}
-    {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 registry:
   HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\SAM\SamrChangeUserPasswordApiPolicy:
     title: "18.9.41.2 | Ensure 'Configure SAM change password RPC methods policy' is set to 'Enabled: Block all change password RPC methods' (MS only) | SamrChangeUserPasswordApiPolicy"
