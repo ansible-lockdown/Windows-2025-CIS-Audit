@@ -1,6 +1,6 @@
 # Changes to Windows-2025-CIS-Audit
 
-## 2.1.0 based on CIS Benchmark v2.1.0
+## Based on CIS Benchmark v2.1.0
 
 - 17 MS only controls and 5.2 Print Spooler asserted on standalone servers
 - 2.3.6.x asserted on domain controllers
@@ -21,9 +21,6 @@
 - 18.9.27.2 asserts RunAsPPL in the Windows System policy key
 - run_audit.ps1 BenchmarkVer 2.1.0
 - README profile counts and control references updated
-
-## September 2026 - NIST and domain members
-
 - NIST800-53R5 added to meta, taken from the role's NIST tags
   - The benchmark JSON carries GRID references only
   - 19.5.1.1 has no NIST tag, so no field
