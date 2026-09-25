@@ -1,7 +1,9 @@
 # Changes to Windows-2025-CIS-Audit
 
+## Based on CIS Benchmark v1.0.0
 ## September 2026 - stand-alone servers
 
+- spec folders for sections 1, 5, 9 and 19 split by subsection, .x suffix dropped
 - 18 MS only controls asserted on any server that is not a domain controller
 - 2.3.6.x asserted on domain controllers
 - 2.2.31 asserts LOCAL SERVICE, NETWORK SERVICE and RESTRICTED SERVICES\PrintSpoolerService, matching the role
