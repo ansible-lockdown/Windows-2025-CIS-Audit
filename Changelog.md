@@ -2,6 +2,8 @@
 
 ## Based on CIS Benchmark v2.1.0
 
+- spec folders for sections 1, 5, 9 and 19 split by subsection, .x suffix dropped
+- 96 manifest entries for missing spec files removed
 - 17 MS only controls and 5.2 Print Spooler asserted on standalone servers
 - 2.3.6.x asserted on domain controllers
 - README: stand-alone server scope and the NGWS switch
