@@ -8,7 +8,7 @@ file:
     path: '{{ .Vars.win25cis_snapshot_dir }}\PrivilegeRights.SeAuditPrivilege'
     exists: true
     contents:
-      - '/^NONE$/'
+      - '/^S-1-5-19,S-1-5-20$/'
     meta:
       domaincontroller: 1
       memberserver: 1
