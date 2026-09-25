@@ -6,6 +6,7 @@
 - 2.3.6.x asserted on domain controllers
 - 2.2.31 asserts LOCAL SERVICE, NETWORK SERVICE and RESTRICTED SERVICES\PrintSpoolerService, matching the role
 - README: stand-alone server scope
+- README: NGWS switch, 2.2.31 asserts the v2.1.0 value
 
 ## September 2026 - NIST and domain members
 
