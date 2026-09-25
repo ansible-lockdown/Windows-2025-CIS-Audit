@@ -1,6 +1,6 @@
 # Changes to Windows-2025-CIS-Audit
 
-## September 2026 - NIST and domain members
+## Based on CIS Benchmark v1.0.0
 
 - NIST800-53R5 added to meta, taken from the role's NIST tags
   - The benchmark JSON carries GRID references only
@@ -10,8 +10,5 @@
 - README covers 2.3.11.6 on domain members
 - Spec folders follow the role's new task files
   - section01, section05, section09, section19 replaced by section_1.1.x, section_1.2.x, section_5.x, section_9.x, section_19.x
-
-## 1.0.0 based on CIS Benchmark v1.0.0
-
 - Initial release - beta, pending feedback. Please raise an issue or reach us on
   Discord with anything it gets wrong, reports unexpectedly, or misses
