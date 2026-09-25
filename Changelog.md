@@ -4,7 +4,7 @@
 
 - 18 MS only controls asserted on any server that is not a domain controller
 - 2.3.6.x asserted on domain controllers
-- 2.2.31 asserts LOCAL SERVICE, NETWORK SERVICE, not NONE
+- 2.2.31 asserts LOCAL SERVICE, NETWORK SERVICE and RESTRICTED SERVICES\PrintSpoolerService, matching the role
 - README: stand-alone server scope
 
 ## September 2026 - NIST and domain members
