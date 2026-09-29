@@ -2,7 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_2_3_1_1 }}
-    {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 file:
   win25cis_2_3_1_1_enableguestaccount:
     title: "2.3.1.1 | Ensure 'Accounts: Guest account status' is set to 'Disabled' (MS only) | EnableGuestAccount"

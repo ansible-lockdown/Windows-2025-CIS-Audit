@@ -39,7 +39,17 @@ it. The generated gates use the cross product, and collapse to a bare level gate
 for the 388 controls that apply identically to both roles.
 
 CIS treats any server that is not a domain controller as a Member Server,
-standalone included.
+standalone included. The audit follows the remediation role: 18 of the MS only
+controls are asserted on any server that is not a domain controller. The ones
+that would cut off remote administration of a standalone server (2.2.22, 2.2.27,
+18.4.1) or need a domain (LAPS, the Netlogon secure channel, cached domain logons)
+are asserted on a member server only.
+
+Next Generation Windows Security (NGWS) is an optional CIS profile. Its eight
+controls (18.9.5.x Device Guard and Credential Guard, 18.9.26.2 LSA protection)
+are asserted only when `win25cis_ngws` is true, which defaults to false. The
+remediation role applies them on the same switch and passes its value to the
+audit, so the two agree.
 
 ## What this audit asserts, and what it deliberately does not
 
@@ -63,6 +73,12 @@ Two consequences worth stating plainly, both proven against live hosts:
   2.3.5.4 applies and is then reverted at the next policy refresh. It is
   expected to fail on a DC hardened by the remediation role; set it in the
   Default Domain Controllers Policy instead.
+- **2.2.31 asserts the v2.1.0 value.** Generate security audits is expected to
+  hold `LOCAL SERVICE, NETWORK SERVICE, RESTRICTED SERVICES\PrintSpoolerService`,
+  not the v1.0.0 value without the Print Spooler account. The Print Spooler
+  service grants the right to its own account every time it starts, so the
+  v1.0.0 value cannot hold; CIS corrected it in v2.1.0 and the remediation role
+  applies that value.
 
 Controls that cannot be asserted are recorded in `coverage.json` with a reason
 code rather than being given an assertion that always passes. The table below is

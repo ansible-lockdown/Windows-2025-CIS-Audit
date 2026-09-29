@@ -516,7 +516,7 @@ win25cis_rule_19_7_46_2_1: true
 ## Site tunables, seeded from the remediation role's defaults
 ##
 
-# rule_2_3_10_9_remote_registry_paths: define me -- not found in the role defaults
+# discovered_remote_registry_paths: define me -- not found in the role defaults
 win25cis_account_lockout_counter_reset: 15
 win25cis_account_lockout_duration: 15
 win25cis_allow_admin_account_lockout: 1
