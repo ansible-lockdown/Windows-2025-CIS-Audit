@@ -9,6 +9,8 @@
 - 2.2.31 asserts LOCAL SERVICE, NETWORK SERVICE and RESTRICTED SERVICES\PrintSpoolerService, matching the role
 - README: stand-alone server scope
 - README: NGWS switch, 2.2.31 asserts the v2.1.0 value
+- 18.9.19.7 asserts DisableBkGndGroupPolicy absent from Policies\System
+- 18.9.26.2 asserts RunAsPPL under the policy key
 
 ## September 2026 - NIST and domain members
 
