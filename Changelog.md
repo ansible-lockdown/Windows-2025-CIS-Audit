@@ -1,6 +1,11 @@
 # Changes to Windows-2025-CIS-Audit
 
 ## Based on CIS Benchmark v1.0.0
+## October 2026
+
+- 2.3.5.2 asserts VulnerableChannelAllowList is absent
+
+## Based on CIS Benchmark v1.0.0
 ## September 2026 - stand-alone servers
 
 - spec folders for sections 1, 5, 9 and 19 split by subsection, .x suffix dropped
