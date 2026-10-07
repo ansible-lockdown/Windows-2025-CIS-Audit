@@ -4,6 +4,7 @@
 ## October 2026
 
 - 2.3.5.2 asserts VulnerableChannelAllowList is absent
+- 18.4.4 asserts the Wow6432Node EnableCertPaddingCheck value
 
 ## Based on CIS Benchmark v1.0.0
 ## September 2026 - stand-alone servers
