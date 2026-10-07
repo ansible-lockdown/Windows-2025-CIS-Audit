@@ -5,6 +5,7 @@
 
 - 2.3.5.2 asserts VulnerableChannelAllowList is absent
 - 18.4.4 asserts the Wow6432Node EnableCertPaddingCheck value
+- 2.3.7.6, 2.3.7.8, 2.3.9.5, 18.4.1, 18.6.21.2 and 18.9.28.4 asserted on standalone servers, helps compliance scanning
 
 ## Based on CIS Benchmark v1.0.0
 ## September 2026 - stand-alone servers
