@@ -40,11 +40,11 @@ use the cross product, and collapse to a bare level gate for the controls that
 apply identically to both roles.
 
 CIS treats any server that is not a domain controller as a Member Server,
-standalone included. The audit follows the remediation role: 18 of the MS only
+standalone included. The audit follows the remediation role: 24 of the MS only
 controls are asserted on any server that is not a domain controller. The ones
-that would cut off remote administration of a standalone server (2.2.21, 2.2.26,
-18.4.1) or need a domain (LAPS, the Netlogon secure channel, cached domain logons)
-are asserted on a member server only.
+that would cut off remote administration of a standalone server (2.2.21, 2.2.26)
+or need a domain to be set at all (LAPS, the Netlogon secure channel) are
+asserted on a member server only.
 
 Next Generation Windows Security (NGWS) is an optional CIS profile. Its eight
 controls (18.9.5.x Device Guard and Credential Guard, 18.9.27.2 LSA protection)

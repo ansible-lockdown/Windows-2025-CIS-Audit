@@ -2,8 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_2_3_9_4 }}
-    {{ if ne .Vars.win25cis_system_role "standalone" }}
-      {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 registry:
   HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters\SMBServerNameHardeningLevel:
     title: "2.3.9.4 | Ensure 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher (MS only) | SMBServerNameHardeningLevel"
@@ -26,7 +25,6 @@ registry:
         - SA-3
         - SA-8
         - SA-10
-      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}

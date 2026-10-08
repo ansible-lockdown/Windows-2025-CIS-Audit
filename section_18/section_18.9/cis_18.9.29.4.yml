@@ -2,7 +2,7 @@
 
 {{ if and (ne .Vars.win25cis_system_role "domaincontroller") .Vars.win25cis_level_1 }}
   {{ if .Vars.win25cis_rule_18_9_29_4 }}
-    {{ if eq .Vars.win25cis_system_role "memberserver" }}
+    {{ if ne .Vars.win25cis_system_role "domaincontroller" }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\Windows\System\EnumerateLocalUsers:
     title: "18.9.29.4 | Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled' (MS only) | EnumerateLocalUsers"

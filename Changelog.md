@@ -2,6 +2,8 @@
 
 ## Based on CIS Benchmark v2.1.0
 
+- 18.4.4 asserts the Wow6432Node EnableCertPaddingCheck value
+- 2.3.7.6, 2.3.7.8, 2.3.9.4, 18.4.1, 18.6.21.2 and 18.9.29.4 asserted on standalone servers
 - 2.3.5.2 asserts VulnerableChannelAllowList is absent
 - spec folders for sections 1, 5, 9 and 19 split by subsection, .x suffix dropped
 - 96 manifest entries for missing spec files removed
