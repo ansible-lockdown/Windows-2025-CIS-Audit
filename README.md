@@ -78,7 +78,12 @@ Two consequences worth stating plainly, both proven against live hosts:
   not the v1.0.0 value without the Print Spooler account. The Print Spooler
   service grants the right to its own account every time it starts, so the
   v1.0.0 value cannot hold; CIS corrected it in v2.1.0 and the remediation role
-  applies that value.
+  applies that value. On a host with IIS or ADFS installed, CIS notes 2 and 3
+  require an exception for this right, so the remediation role leaves it
+  untouched and warns, and this audit reports 2.2.31 as skipped with the reason
+  in `meta.skip_reason`. Setting
+  `win25cis_apply_generate_security_audits_on_iis_adfs` to true in the role
+  applies and asserts the value on those hosts as well.
 
 Controls that cannot be asserted are recorded in `coverage.json` with a reason
 code rather than being given an assertion that always passes. The table below is
