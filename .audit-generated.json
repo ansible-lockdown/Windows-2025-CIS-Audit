@@ -1,5 +1,5 @@
 {
-  "README.md": "9f0aab6b68a41f8a336c63019cebcfe45ec1c8f2955f1f15edf7e73c7a9bd579",
+  "README.md": "dfd4a5f8f6aa434d7e1e46bc29e693ffdc5f181a143c53989672fe5b84237e16",
   "collector_targets.json": "3702659637fc88b4f35ec08130eea6110fea03c5d1189c70831f2e48962b0523",
   "coverage.json": "5818c6ed97ceb7050529b7d5bfcff791e6782e0b677a3e3230acd223f3f6fab5",
   "goss.yml": "74962236b9ece55331c7a6ad79aad6b18113811b0d9819c4d489484fb264369f",
@@ -311,7 +311,7 @@
   "section_2/section_2.2/cis_2.2.28.yml": "4dbe450cc3903bf8c80c8f7854bf6ee8bfea9ebf4410fe7876da9971ce285964",
   "section_2/section_2.2/cis_2.2.29.yml": "c4a6a839951199caba8d6fc3bf183be1bc2da39705dc9071a63cfae0815d5c17",
   "section_2/section_2.2/cis_2.2.3.yml": "866d03021ebd93065f49e4e8262a07ed4b35f93f8791edd44a80450e0c7f52e8",
-  "section_2/section_2.2/cis_2.2.30.yml": "e8a251ceaad1612170ff38164f79879f27100f925c65b35ba7fcd11000fdd4af",
+  "section_2/section_2.2/cis_2.2.30.yml": "f230d0df5858a5d68ab961ad5e5550479e4f04e226e5b6910ccf53c0ab3cbaa0",
   "section_2/section_2.2/cis_2.2.31.yml": "c7e9acdfe68793db04e52714991e8a87328eea62b2bd2ae171a5636065263039",
   "section_2/section_2.2/cis_2.2.32.yml": "d7c1c8d3636199f784282e9b8c67f1be8efd1dccf03b9223d3c999efe7a592d5",
   "section_2/section_2.2/cis_2.2.34.yml": "894a7ced57d6ef62af1b82110c10e050d627416a96ec862164d19086d255a207",
@@ -429,5 +429,5 @@
   "section_9/section_9.3/cis_9.3.7.yml": "80cb049145640bb0608d8689089a6f44bd9dfab0b2ace4d5783c93bbcfd7cf8c",
   "section_9/section_9.3/cis_9.3.8.yml": "0d0725a2678f324fc4e898c38a6ac29fb90f86013a570d444bd73010090ecfa8",
   "section_9/section_9.3/cis_9.3.9.yml": "bd25e329e2114863af4249c4a219cd175d1cc687bca52ba18cf59943967a867a",
-  "vars/CIS.yml": "c783d3afa70daae05093e11c080b7eebe4aebfe821560e86afdbf77f04a4d243"
+  "vars/CIS.yml": "4efe4d0527d4decfc29f09c13b2a6e680d5e08b8619ab70b316c450516126fdb"
 }

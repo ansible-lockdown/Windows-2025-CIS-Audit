@@ -9,9 +9,9 @@ file:
     exists: true
     contents:
       - '/^S-1-5-19,S-1-5-20,S-1-5-99-216390572-1995538116-3857911515-2404958512-2623887229$/'
-    skip: {{ if and (or .Vars.win25cis_iis_and_web_services_installed .Vars.win25cis_adfs_installed) (not .Vars.win25cis_apply_generate_security_audits_on_iis_adfs) }}true{{ else }}false{{ end }}
+    skip: {{ if or (not (or .Vars.win25cis_iis_and_web_services_installed .Vars.win25cis_adfs_installed)) .Vars.win25cis_apply_generate_security_audits_on_iis_adfs }}false{{ else }}true{{ end }}
     meta:
-      skip_reason: "IIS or ADFS installed - CIS notes 3 and 4 require an exception for this right on these hosts, so the role does not apply it"
+      skip_reason: "IIS or ADFS installed - CIS requires an exception for this right on these hosts, so the role does not apply it"
       domaincontroller: 1
       memberserver: 1
       server: 1
