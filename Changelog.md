@@ -2,6 +2,7 @@
 
 ## Based on CIS Benchmark v2.1.0
 
+- 2.2.30 skipped on IIS and ADFS hosts unless win25cis_apply_generate_security_audits_on_iis_adfs is set
 - 18.4.4 asserts the Wow6432Node EnableCertPaddingCheck value
 - 2.3.7.6, 2.3.7.8, 2.3.9.4, 18.4.1, 18.6.21.2 and 18.9.29.4 asserted on standalone servers
 - 2.3.5.2 asserts VulnerableChannelAllowList is absent

@@ -32,6 +32,16 @@ win25cis_ngws: false
 win25cis_system_role: 'memberserver'
 win25cis_win_skip_for_test: false
 
+#  2.2.30 - discovered by the remediation role and passed in its audit vars.
+#  On an IIS or ADFS host the role leaves Generate security audits untouched,
+#  because CIS notes 3 and 4 require an exception there, unless
+#  win25cis_apply_generate_security_audits_on_iis_adfs is true. The audit
+#  skips 2.2.30 to match.
+#  Left false here, a stand-alone run asserts the baseline as before.
+win25cis_iis_and_web_services_installed: false
+win25cis_adfs_installed: false
+win25cis_apply_generate_security_audits_on_iis_adfs: false
+
 
 ##
 ## Rule-specific switches

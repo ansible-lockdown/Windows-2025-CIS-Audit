@@ -70,6 +70,12 @@ Two consequences worth stating plainly, both proven against live hosts:
   reason in `meta.skip_reason`, so the count still adds up. To meet CIS section 1 on a member server, set it in the Default Domain
   Policy. 2.3.11.5 (`ForceLogoffWhenHourExpire`) is also a `[System Access]`
   value the Default Domain Policy sets, so it is skipped the same way.
+- **2.2.30 Generate security audits has IIS and ADFS exceptions.** On a host
+  with IIS or ADFS installed, CIS notes 3 and 4 require an exception for this
+  right, so the remediation role leaves it untouched and warns, and this audit
+  reports 2.2.30 as skipped with the reason in `meta.skip_reason`. Setting
+  `win25cis_apply_generate_security_audits_on_iis_adfs` to true in the role
+  applies and asserts the value on those hosts as well.
 
 Controls that cannot be asserted are recorded in `coverage.json` with a reason
 code rather than being given an assertion that always passes. The table below is
