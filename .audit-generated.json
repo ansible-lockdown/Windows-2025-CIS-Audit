@@ -1,5 +1,5 @@
 {
-  "README.md": "a9c37e6622135f0e3f42cec685a66a41b35a8aac1b797c1857f360ec5390fa5f",
+  "README.md": "aefde7d3bd7e05b6f2fe28377a3cf08b4900cbd62ba4cb281c4ee7adeb03f178",
   "collector_targets.json": "6d667dcc8c09a333732d12b94732ac8a2af09cb3d13a0fdceeedb35b0269bf87",
   "coverage.json": "44c1ad90205ff5d4225f1f67af29731a4116a7daa2847cfe547b80a7f3db1d95",
   "goss.yml": "74962236b9ece55331c7a6ad79aad6b18113811b0d9819c4d489484fb264369f",
@@ -341,7 +341,7 @@
   "section_2/section_2.2/cis_2.2.29.yml": "c27f84f625b63b064abbe11fbc84190df2fafcc1b2b924d010545b8006bb646d",
   "section_2/section_2.2/cis_2.2.3.yml": "866d03021ebd93065f49e4e8262a07ed4b35f93f8791edd44a80450e0c7f52e8",
   "section_2/section_2.2/cis_2.2.30.yml": "54bb455466a5b6a31a47ca89b78cb680781072708fd2011c4435deaf261e128a",
-  "section_2/section_2.2/cis_2.2.31.yml": "8519924a96454961e06bcb0c902619d36087a5b4efb338152d56872683210e7c",
+  "section_2/section_2.2/cis_2.2.31.yml": "5d93ce9c93500607a3c66afdbdde0d9c509eeb20f67e45a575277e912d1b613a",
   "section_2/section_2.2/cis_2.2.32.yml": "e132693daaadd170ab317e25a24df8dfeedad0ae40733dc421837df71df61d7e",
   "section_2/section_2.2/cis_2.2.33.yml": "fd2f927ec3f670a0bb74837f167379356860c0572ead6c2ee7b3b218f623e04b",
   "section_2/section_2.2/cis_2.2.35.yml": "734101dd28cb82973dae7d66a02b163c6e947e5e192c7604d36f096acc04d348",
@@ -463,5 +463,5 @@
   "section_9/section_9.3/cis_9.3.7.yml": "80cb049145640bb0608d8689089a6f44bd9dfab0b2ace4d5783c93bbcfd7cf8c",
   "section_9/section_9.3/cis_9.3.8.yml": "0d0725a2678f324fc4e898c38a6ac29fb90f86013a570d444bd73010090ecfa8",
   "section_9/section_9.3/cis_9.3.9.yml": "bd25e329e2114863af4249c4a219cd175d1cc687bca52ba18cf59943967a867a",
-  "vars/CIS.yml": "169925f065fa22a23799090d3fa1bfc5a5cb36eb3284778d8e2e6b25bebc334f"
+  "vars/CIS.yml": "f45936064433b2113fb0141dfc6b13124638b55283b630a53dd82712dbee0a14"
 }
