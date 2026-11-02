@@ -31,6 +31,8 @@ win25cis_ngws: false
 #  was actually asked to apply.
 win25cis_system_role: 'memberserver'
 win25cis_win_skip_for_test: false
+win25cis_iis_and_web_services_installed: false
+win25cis_adfs_installed: false
 
 
 ##
@@ -523,6 +525,7 @@ win25cis_allow_admin_account_lockout: 1
 win25cis_allow_telemetry: 1
 win25cis_allow_windows_ink_workspace: 1
 win25cis_application_max_log_file_size: 32768
+win25cis_apply_generate_security_audits_on_iis_adfs: false
 win25cis_bad_login_lockout_count: 5
 win25cis_brute_force_protection_aggressiveness: 1
 win25cis_cached_logons_count: 1
