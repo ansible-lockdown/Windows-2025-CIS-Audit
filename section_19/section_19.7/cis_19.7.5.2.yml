@@ -16,6 +16,6 @@ file:
       CIS_ID:
         - 19.7.5.2
       NIST800-53R5:
-        - SI-3
+        - SI-3c
   {{ end }}
 {{ end }}

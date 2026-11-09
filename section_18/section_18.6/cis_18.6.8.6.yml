@@ -15,12 +15,6 @@ registry:
       CIS_ID:
         - 18.6.8.6
       NIST800-53R5:
-        - SC-7(10)
-        - SC-12
-        - SC-13
-        - SC-28
-        - CM-6
-        - CM-7
-        - SI-7(1)
+        - CM-7b
   {{ end }}
 {{ end }}

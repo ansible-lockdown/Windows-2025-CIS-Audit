@@ -16,6 +16,6 @@ file:
       CIS_ID:
         - 19.7.5.1
       NIST800-53R5:
-        - CM-6b
+        - AC-16b
   {{ end }}
 {{ end }}

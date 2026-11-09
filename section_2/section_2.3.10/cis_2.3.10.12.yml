@@ -15,6 +15,6 @@ registry:
       CIS_ID:
         - 2.3.10.12
       NIST800-53R5:
-        - AC-3
+        - AC-14a
   {{ end }}
 {{ end }}

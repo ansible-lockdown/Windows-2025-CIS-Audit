@@ -13,7 +13,7 @@ registry:
       CIS_ID:
         - 2.3.5.2
       NIST800-53R5:
-        - CM-6b
+        - SC-8(1)
     {{ end }}
   {{ end }}
 {{ end }}

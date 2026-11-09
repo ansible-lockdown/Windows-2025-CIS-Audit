@@ -15,5 +15,7 @@ file:
       server: 1
       CIS_ID:
         - 19.5.1.1
+      NIST800-53R5:
+        - AC-11(1)
   {{ end }}
 {{ end }}

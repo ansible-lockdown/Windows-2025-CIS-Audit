@@ -2,7 +2,7 @@
 
 ## Overview
 
-### Based on CIS Microsoft Windows Server 2025 Benchmark v2.1.0
+### Based on CIS Microsoft Windows Server 2025 Benchmark v2.1.1
 
 [Centre For Internet Security]
 

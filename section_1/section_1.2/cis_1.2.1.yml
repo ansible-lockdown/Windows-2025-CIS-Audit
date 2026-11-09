@@ -22,7 +22,6 @@ command:
       CIS_ID:
         - 1.2.1
       NIST800-53R5:
-        - AC-7
-        - AC-19
+        - AC-7b
   {{ end }}
 {{ end }}

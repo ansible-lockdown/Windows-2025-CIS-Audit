@@ -15,7 +15,6 @@ registry:
       CIS_ID:
         - 18.9.53.1.1
       NIST800-53R5:
-        - AU-7
-        - AU-8
+        - SC-45
   {{ end }}
 {{ end }}

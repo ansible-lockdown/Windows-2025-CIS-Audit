@@ -15,7 +15,6 @@ registry:
       CIS_ID:
         - 9.3.2
       NIST800-53R5:
-        - SC-7
         - SC-7(5)
 file:
   win25cis_9_3_2_effective:
@@ -31,7 +30,6 @@ file:
       CIS_ID:
         - 9.3.2
       NIST800-53R5:
-        - SC-7
         - SC-7(5)
   {{ end }}
 {{ end }}

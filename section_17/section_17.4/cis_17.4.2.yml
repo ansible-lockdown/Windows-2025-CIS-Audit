@@ -16,10 +16,7 @@ file:
       CIS_ID:
         - 17.4.2
       NIST800-53R5:
-        - AU-3
-        - AU-3(1)
-        - AU-7
-        - AU-12
+        - AU-2c
     {{ end }}
   {{ end }}
 {{ end }}

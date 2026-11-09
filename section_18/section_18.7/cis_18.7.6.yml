@@ -15,6 +15,6 @@ registry:
       CIS_ID:
         - 18.7.6
       NIST800-53R5:
-        - IA-3(1)
+        - SC-23
   {{ end }}
 {{ end }}

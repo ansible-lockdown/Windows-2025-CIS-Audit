@@ -15,8 +15,6 @@ registry:
       CIS_ID:
         - 18.5.1
       NIST800-53R5:
-        - IA-5(1)
-        - SC-28
-        - SC-28(1)
+        - IA-2
   {{ end }}
 {{ end }}

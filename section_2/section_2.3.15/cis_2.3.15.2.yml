@@ -15,15 +15,6 @@ registry:
       CIS_ID:
         - 2.3.15.2
       NIST800-53R5:
-        - CM-1
-        - CM-2
-        - AC-2
-        - CM-6
-        - CM-7
-        - CM-7(1)
-        - CM-9
-        - SA-3
-        - SA-8
-        - SA-10
+        - AC-3
   {{ end }}
 {{ end }}

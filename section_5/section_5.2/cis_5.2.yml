@@ -16,8 +16,7 @@ file:
       CIS_ID:
         - 5.2
       NIST800-53R5:
-        - CM-6
-        - CM-7
+        - CM-7b
     {{ end }}
   {{ end }}
 {{ end }}

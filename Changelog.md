@@ -1,5 +1,13 @@
 # Changes to Windows-2025-CIS-Audit
 
+## CIS Benchmark 2.1.1
+## November 2026 - CIS v2.1.1
+
+- Benchmark version v2.1.0 to v2.1.1
+- NIST800-53R5 meta regenerated from the benchmark mappings
+- run_audit.ps1 benchmark version 2.1.1
+- README: benchmark version v2.1.1
+
 ## CIS Benchmark 2.1.0
 ## November 2026 - syver 0.16.0
 

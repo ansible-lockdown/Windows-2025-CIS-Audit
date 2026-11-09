@@ -15,7 +15,7 @@ registry:
       CIS_ID:
         - 2.3.10.7
       NIST800-53R5:
-        - IA-2(2)
+        - AC-14a
     {{ end }}
   {{ end }}
 {{ end }}

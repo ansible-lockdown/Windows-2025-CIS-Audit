@@ -14,5 +14,7 @@ registry:
       server: 2
       CIS_ID:
         - 18.7.18
+      NIST800-53R5:
+        - IA-3
   {{ end }}
 {{ end }}

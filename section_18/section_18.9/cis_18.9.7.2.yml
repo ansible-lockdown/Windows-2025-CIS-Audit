@@ -14,5 +14,7 @@ registry:
       server: 1
       CIS_ID:
         - 18.9.7.2
+      NIST800-53R5:
+        - CM-11b
   {{ end }}
 {{ end }}

@@ -15,7 +15,7 @@ registry:
       CIS_ID:
         - 18.4.4
       NIST800-53R5:
-        - SC-8
+        - SI-7(15)
   HKLM\SOFTWARE\Wow6432Node\Microsoft\Cryptography\Wintrust\Config\EnableCertPaddingCheck:
     title: "18.4.4 | Ensure 'Enable Certificate Padding' is set to 'Enabled' | EnableCertPaddingCheck"
     exists: true
@@ -28,6 +28,6 @@ registry:
       CIS_ID:
         - 18.4.4
       NIST800-53R5:
-        - SC-8
+        - SI-7(15)
   {{ end }}
 {{ end }}

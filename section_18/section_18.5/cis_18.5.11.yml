@@ -15,6 +15,6 @@ registry:
       CIS_ID:
         - 18.5.11
       NIST800-53R5:
-        - AU-4
+        - AU-5(1)
   {{ end }}
 {{ end }}

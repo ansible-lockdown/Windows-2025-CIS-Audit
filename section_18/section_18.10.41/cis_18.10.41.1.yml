@@ -15,6 +15,6 @@ registry:
       CIS_ID:
         - 18.10.41.1
       NIST800-53R5:
-        - AC-2(1)
+        - AC-2a
   {{ end }}
 {{ end }}

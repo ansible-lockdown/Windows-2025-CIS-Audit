@@ -16,11 +16,7 @@ registry:
       CIS_ID:
         - 2.3.11.4
       NIST800-53R5:
-        - AC-17(2)
-        - IA-5
-        - IA-5(1)
-        - SC-8
-        - SC-8(1)
+        - SC-13b
     {{ end }}
     {{ if not .Vars.win25cis_legacy_rc4_hmac_md5_support }}
 registry:
@@ -36,11 +32,7 @@ registry:
       CIS_ID:
         - 2.3.11.4
       NIST800-53R5:
-        - AC-17(2)
-        - IA-5
-        - IA-5(1)
-        - SC-8
-        - SC-8(1)
+        - SC-13b
     {{ end }}
   {{ end }}
 {{ end }}

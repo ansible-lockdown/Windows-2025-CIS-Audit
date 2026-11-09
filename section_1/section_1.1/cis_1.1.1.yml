@@ -22,6 +22,6 @@ command:
       CIS_ID:
         - 1.1.1
       NIST800-53R5:
-        - IA-5(1)
+        - IA-5c
   {{ end }}
 {{ end }}

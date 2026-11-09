@@ -16,7 +16,7 @@ file:
       CIS_ID:
         - 2.3.1.1
       NIST800-53R5:
-        - IA-5
+        - AC-2(3)
     {{ end }}
   {{ end }}
 {{ end }}

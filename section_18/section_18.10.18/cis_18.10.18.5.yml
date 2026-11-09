@@ -15,9 +15,6 @@ registry:
       CIS_ID:
         - 18.10.18.5
       NIST800-53R5:
-        - CM-6
-        - CM-7
-        - SI-3
-        - SI-4
+        - IA-9
   {{ end }}
 {{ end }}

@@ -15,7 +15,6 @@ registry:
       CIS_ID:
         - 9.1.3
       NIST800-53R5:
-        - SC-7
-        - SC-7(5)
+        - SC-7(12)
   {{ end }}
 {{ end }}

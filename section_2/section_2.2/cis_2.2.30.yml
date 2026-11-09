@@ -18,11 +18,6 @@ file:
       CIS_ID:
         - 2.2.30
       NIST800-53R5:
-        - AC-2
-        - AC-3
-        - AC-6
-        - AC-6(1)
-        - AC-6(7)
-        - AU-9(4)
+        - AU-9a
   {{ end }}
 {{ end }}

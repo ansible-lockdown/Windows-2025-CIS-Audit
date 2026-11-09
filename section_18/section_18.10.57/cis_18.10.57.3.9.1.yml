@@ -15,7 +15,6 @@ registry:
       CIS_ID:
         - 18.10.57.3.9.1
       NIST800-53R5:
-        - AC-17(6)
-        - IA-2
+        - IA-11
   {{ end }}
 {{ end }}

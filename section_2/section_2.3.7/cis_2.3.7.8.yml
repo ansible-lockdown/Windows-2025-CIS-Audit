@@ -15,10 +15,7 @@ registry:
       CIS_ID:
         - 2.3.7.8
       NIST800-53R5:
-        - AC-2(5)
-        - AC-11
-        - AC-11(1)
-        - AC-12
+        - IA-5(13)
     {{ end }}
   {{ end }}
 {{ end }}

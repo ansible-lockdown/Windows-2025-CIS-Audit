@@ -15,6 +15,6 @@ registry:
       CIS_ID:
         - 18.9.51.1
       NIST800-53R5:
-        - SI-4
+        - PT-3c
   {{ end }}
 {{ end }}

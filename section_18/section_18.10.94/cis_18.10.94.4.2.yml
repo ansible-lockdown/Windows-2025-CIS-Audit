@@ -15,9 +15,7 @@ registry:
       CIS_ID:
         - 18.10.94.4.2
       NIST800-53R5:
-        - RA-5
-        - SI-2
-        - SI-2(2)
+        - SI-2c
   HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\DeferQualityUpdatesPeriodInDays:
     title: "18.10.94.4.2 | Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days' | DeferQualityUpdatesPeriodInDays"
     exists: true
@@ -30,8 +28,6 @@ registry:
       CIS_ID:
         - 18.10.94.4.2
       NIST800-53R5:
-        - RA-5
-        - SI-2
-        - SI-2(2)
+        - SI-2c
   {{ end }}
 {{ end }}

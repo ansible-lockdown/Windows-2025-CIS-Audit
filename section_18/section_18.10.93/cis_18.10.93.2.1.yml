@@ -15,6 +15,6 @@ registry:
       CIS_ID:
         - 18.10.93.2.1
       NIST800-53R5:
-        - SI-16
+        - AC-6(10)
   {{ end }}
 {{ end }}
