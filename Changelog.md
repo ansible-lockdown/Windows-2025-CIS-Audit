@@ -1,5 +1,14 @@
 # Changes to Windows-2025-CIS-Audit
 
+## CIS Benchmark 2.1.0
+## November 2026 - syver 0.16.0
+
+- run_audit.ps1 minimum raised to syver 0.16.0
+- goss.yml renamed syver.yml, gossfile key renamed syverfile
+- 12 skip reasons moved from meta.skip_reason to the skip-reason attribute
+- 13 win_skip_for_test controls reported as skipped with a reason, were dropped from the report
+- README: skip-reason, syver.yml and win_skip_for_test reporting
+
 ## Based on CIS Benchmark v2.1.0
 
 - 2.2.30 skipped on IIS and ADFS hosts unless win25cis_apply_generate_security_audits_on_iis_adfs is set
