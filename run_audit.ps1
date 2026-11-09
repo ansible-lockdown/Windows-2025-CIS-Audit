@@ -6,7 +6,7 @@
 .DESCRIPTION
     The PowerShell counterpart of run_audit.sh, with one addition.
 
-    Most of what this benchmark checks is not readable by a goss resource:
+    Most of what this benchmark checks is not readable by a syver resource:
     account policy, user rights, audit policy and per-user hives all come from
     secedit / auditpol / the registry under HKEY_USERS. Giving each control its
     own shell-out would mean roughly 130 secedit exports of the same data,
@@ -73,14 +73,13 @@ $BenchmarkOs  = 'Windows-2025'
 
 # Overridable from the environment, mirroring run_audit.sh
 $AuditBin = if ($env:AUDIT_BIN) { $env:AUDIT_BIN } else { 'C:\Program Files\syver\syver.exe' }
-# Minimum, and enforced rather than warned about. From 0.11.0 syver reports a
-# check it cannot run as an ERROR instead of letting it pass quietly; below that
-# an unsupported assertion looks like a pass, which is the vacuous green run this
-# audit exists to avoid. 0.11.1 is the version the content was validated against
-# and the earliest release carrying that behaviour, so anything older is refused
-# rather than noted.
-$AuditBinMinVer = '0.11.1'
-$AuditFile = if ($env:AUDIT_FILE) { $env:AUDIT_FILE } else { 'goss.yml' }
+# Minimum, and enforced rather than warned about. The specs give every
+# deliberate skip a skip-reason: attribute, which syver 0.15.x and older reject
+# as an unknown attribute, aborting the whole run. 0.16.0 also keeps the
+# 0.11.0 behaviour this audit relies on: a check syver cannot run ERRORS rather
+# than passing quietly.
+$AuditBinMinVer = '0.16.0'
+$AuditFile = if ($env:AUDIT_FILE) { $env:AUDIT_FILE } else { 'syver.yml' }
 $AuditContentLocation = if ($env:AUDIT_CONTENT_LOCATION) {
     $env:AUDIT_CONTENT_LOCATION
 } else {
@@ -88,7 +87,7 @@ $AuditContentLocation = if ($env:AUDIT_CONTENT_LOCATION) {
 }
 
 $auditContentDir = Join-Path $AuditContentLocation "$BenchmarkOs-$Benchmark-Audit"
-$gossFile        = Join-Path $auditContentDir $AuditFile
+$auditFilePath   = Join-Path $auditContentDir $AuditFile
 $targetsFile     = Join-Path $auditContentDir 'collector_targets.json'
 $varfilePath     = if ($VarsPath) { $VarsPath } else { Join-Path $auditContentDir "vars\$Benchmark.yml" }
 $snapshotPath    = Join-Path $env:SystemRoot 'Temp\win25cis_policy_snapshot.txt'
@@ -417,8 +416,7 @@ if (-not $CollectOnly) {
                 Write-Host "OK - syver version is ok ($installed >= $AuditBinMinVer)"
             } else {
                 Write-Host ("WARNING - syver installed = $installed, does not meet minimum of " +
-                    "$AuditBinMinVer. Below 0.11.0 an unsupported check passes quietly instead " +
-                    "of erroring, so a clean run would not mean the host is compliant.")
+                    "$AuditBinMinVer, which the skip-reason: attribute in these specs needs.")
                 $failure = 2
             }
         } else {
@@ -430,10 +428,10 @@ if (-not $CollectOnly) {
         $failure = 1
     }
 
-    if (Test-Path -LiteralPath $gossFile) {
-        Write-Host "OK - $gossFile is available"
+    if (Test-Path -LiteralPath $auditFilePath) {
+        Write-Host "OK - $auditFilePath is available"
     } else {
-        Write-Host "WARNING - the $gossFile is not available"
+        Write-Host "WARNING - the $auditFilePath is not available"
         $failure = 3
     }
 
@@ -542,7 +540,7 @@ $metaVarsFile = Join-Path $env:TEMP 'win25cis_meta_vars.json'
 
 try {
     $output = Invoke-Syver {
-        & $AuditBin --use-alpha=1 -g $gossFile `
+        & $AuditBin --use-alpha=1 -g $auditFilePath `
             --vars $varfilePath --vars $metaVarsFile `
             v --max-concurrent $MaxConcurrent @formatArgs 2>&1
     }
